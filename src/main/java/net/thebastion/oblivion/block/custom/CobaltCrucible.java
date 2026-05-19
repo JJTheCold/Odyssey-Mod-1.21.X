@@ -54,7 +54,7 @@ public class CobaltCrucible extends AbstractFurnaceBlock {
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (state.getValue(LIT)) {
-            double d0 = (double)pos.getX() + 0.5;
+            double d0 = (double)pos.getX() + 0.6;
             double d1 = pos.getY();
             double d2 = (double)pos.getZ() + 0.5;
             if (random.nextDouble() < 0.1) {
