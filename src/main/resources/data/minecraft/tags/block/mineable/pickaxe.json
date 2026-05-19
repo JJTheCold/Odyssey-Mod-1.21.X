@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "oblivion:cobalt-block",
+    "oblivion:raw-cobalt-block",
+    "oblivion:deepslate-cobalt-ore",
+    "oblivion:cobalt-ore"
+  ]
+}

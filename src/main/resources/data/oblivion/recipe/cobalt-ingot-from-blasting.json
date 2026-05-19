@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1,
+  "ingredient": {
+    "item": "oblivion:raw-cobalt"
+  },
+  "result": {
+    "id": "oblivion:cobalt-ingot"
+  }
+}

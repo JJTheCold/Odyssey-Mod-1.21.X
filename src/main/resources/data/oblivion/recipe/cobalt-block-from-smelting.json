@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1800,
+  "experience": 9,
+  "ingredient": {
+    "item": "oblivion:raw-cobalt-block"
+  },
+  "result": {
+    "id": "oblivion:cobalt-block"
+  }
+}
