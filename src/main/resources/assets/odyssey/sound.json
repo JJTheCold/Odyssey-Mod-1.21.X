@@ -1,0 +1,44 @@
+{
+  "han_d_punch": {
+    "subtitle": "sounds.odyssey.han_d_punch",
+    "sounds": [
+      "odyssey:han_d_punch"
+    ]
+  },
+  "han_d_slam_end": {
+    "subtitle": "sounds.odyssey.han_d_slam_end",
+    "sounds": [
+      "odyssey:han_d_slam_end"
+    ]
+  },
+  "han_d_slam_start": {
+    "subtitle": "sounds.odyssey.han_d_slam_start",
+    "sounds": [
+      "odyssey:han_d_slam_start"
+    ]
+  },
+  "han_d_ambient": {
+    "subtitle": "sounds.odyssey.han_d_ambient",
+    "sounds": [
+      "odyssey:han_d_ambient"
+    ]
+  },
+  "han_d_hit": {
+    "subtitle": "sounds.odyssey.han_d_hit",
+    "sounds": [
+      "odyssey:han_d_hit"
+    ]
+  },
+  "han_d_death": {
+    "subtitle": "sounds.odyssey.han_d_death",
+    "sounds": [
+      "odyssey:han_d_death"
+    ]
+  },
+  "han_d_walk_loop": {
+    "subtitle": "sounds.odyssey.han_d_walk_loop",
+    "sounds": [
+      "odyssey:han_d_walk_loop"
+    ]
+  }
+}

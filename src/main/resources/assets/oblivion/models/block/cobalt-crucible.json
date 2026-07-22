@@ -1,8 +1,0 @@
-{
-	"parent": "minecraft:block/orientable",
-	"textures": {
-		"front": "oblivion:block/cobalt-crucible-front",
-		"side": "oblivion:block/cobalt-crucible-side",
-		"top": "oblivion:block/cobalt-crucible-top"
-	}
-}

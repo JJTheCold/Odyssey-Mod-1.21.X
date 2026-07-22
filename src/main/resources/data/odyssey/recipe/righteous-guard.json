@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "odyssey:recipe-book-fix"
+    },
+    "A": {
+      "item": "odyssey:righteous-alloy"
+    },
+    "X": {
+      "item": "minecraft:shield"
+    },
+    "G": {
+      "item": "odyssey:honored-metal"
+    }
+  },
+  "pattern": [
+    "#GA",
+    "GXG",
+    "AG "
+  ],
+  "result": {
+    "count": 1,
+    "id": "odyssey:righteous-guard"
+  }
+}

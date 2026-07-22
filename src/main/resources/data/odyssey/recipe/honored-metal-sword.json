@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "odyssey:ancient-schematic"
+    },
+    "A": {
+      "item": "minecraft:gold_ingot"
+    },
+    "X": {
+      "item": "minecraft:iron_sword"
+    },
+    "G": {
+      "item": "odyssey:honored-metal"
+    }
+  },
+  "pattern": [
+    "# G",
+    "AX ",
+    "GA "
+  ],
+  "result": {
+    "count": 1,
+    "id": "odyssey:honored-metal-sword"
+  }
+}

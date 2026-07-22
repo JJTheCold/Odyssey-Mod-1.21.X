@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "odyssey:empty-ancient-recipe-book"
+    },
+    {
+      "item": "odyssey:righteous-alloy"
+    },
+    {
+      "item": "odyssey:buried-schematic"
+    },
+    {
+      "item": "odyssey:buried-schematic"
+    },
+    {
+      "item": "odyssey:buried-schematic"
+    },
+    {
+      "item": "odyssey:buried-schematic"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "odyssey:ancient-recipe-book"
+  }
+}

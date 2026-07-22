@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "odyssey:item/large-sword",
+    "textures": {
+      "layer0": "odyssey:item/righteous-blade"
+    }
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "odyssey:item/righteous-blade-gui"
+      }
+    }
+  }
+}

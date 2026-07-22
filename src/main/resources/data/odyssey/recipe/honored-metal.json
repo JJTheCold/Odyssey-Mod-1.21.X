@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "odyssey:ancient-schematic"
+    },
+    {
+      "item": "odyssey:honored-metal-fragment"
+    },
+    {
+      "item": "odyssey:honored-metal-fragment"
+    },
+    {
+      "item": "odyssey:honored-metal-fragment"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "odyssey:honored-metal"
+  }
+}

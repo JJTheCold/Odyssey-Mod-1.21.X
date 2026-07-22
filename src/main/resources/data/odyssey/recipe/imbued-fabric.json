@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "odyssey:ancient-schematic"
+    },
+    {
+      "item": "minecraft:white_wool"
+    },
+    {
+      "item": "odyssey:righteous-alloy"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "odyssey:imbued-fabric"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "remove": [
+    "#odyssey:needs_honored_metal_tool"
+  ],
+  "values": [
+    "#minecraft:needs_diamond_tool",
+    "#minecraft:incorrect_for_diamond_tool"
+  ]
+}

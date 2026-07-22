@@ -1,0 +1,11 @@
+{
+  "entries": [
+    "odyssey:buried-schematic-locations",
+    "odyssey:loot-modifier-underwater_ruin_small",
+    "odyssey:loot-modifier-underwater_ruin_big",
+    "odyssey:loot-modifier-mineshaft",
+    "odyssey:loot-modifier-dungeon",
+    "odyssey:loot-modifier-buried-treasure"
+  ],
+  "replace": false
+}
