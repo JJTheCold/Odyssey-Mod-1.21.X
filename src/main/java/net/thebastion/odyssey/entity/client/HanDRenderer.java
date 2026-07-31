@@ -10,7 +10,7 @@ import net.thebastion.odyssey.entity.custom.HanD;
 
 public class HanDRenderer extends MobRenderer<HanD, HanDModel<HanD>> {
     public HanDRenderer(EntityRendererProvider.Context context) {
-        super(context, new HanDModel<>(context.bakeLayer(HanDModel.LAYER_LOCATION)), 1f);
+        super(context, new HanDModel<>(context.bakeLayer(HanDModel.LAYER_LOCATION)), 2f);
         this.addLayer(new HanDGlowLayer<>(this));
     }
 

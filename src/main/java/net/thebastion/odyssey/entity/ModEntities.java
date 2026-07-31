@@ -7,6 +7,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.thebastion.odyssey.Odyssey;
 import net.thebastion.odyssey.entity.custom.HanD;
+import net.thebastion.odyssey.entity.custom.RelicBolt;
+import net.thebastion.odyssey.entity.custom.ScytheProjectile;
 
 import java.util.function.Supplier;
 
@@ -21,11 +23,19 @@ public class ModEntities {
             ENTITY_TYPES.register("han-d", () -> EntityType.Builder.of(HanD::new, MobCategory.MISC)
                     .sized(1.2f, 3f).build("han-d"));
 
+    public static final Supplier<EntityType<ScytheProjectile>> SCYTHE_PROJECTILE =
+            ENTITY_TYPES.register("scythe-projectile", () -> EntityType.Builder.<ScytheProjectile>of(ScytheProjectile::new, MobCategory.MISC)
+                    .sized(3f, 1f).build("scythe-projectile"));
+
+    public static final Supplier<EntityType<RelicBolt>> RELIC_BOLT =
+            ENTITY_TYPES.register("relic-bolt", () -> EntityType.Builder.<RelicBolt>of(RelicBolt::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f).build("relic-bolt"));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }
 
-    ///CAMERA SHAKE///
+    ///CAMERA SHAKE by someone, I can't remember///
 
     /*public static final DeferredHolder<EntityType<?>, EntityType<CameraShake>> CAMERA_SHAKE = register("camera_shake",
             EntityType.Builder.<CameraShake>of(CameraShake::new, MobCategory.MISC)

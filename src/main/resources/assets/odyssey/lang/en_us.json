@@ -1,9 +1,12 @@
 {
   "item.odyssey.han-d-spawner": "Han-D Spawn Egg",
 
-  "itemGroup.odyssey.odyssey": "Odyssey",
+  "itemgroup.odyssey.odyssey": "Odyssey",
 
+  "item.odyssey.guided-scythe": "Guided Scythe",
   "item.odyssey.righteous-guard": "Righteous Guard",
+  "item.odyssey.hadean-greataxe": "Hadean GreatAxe",
+
   "item.odyssey.righteous-blade": "Righteous Blade",
   "item.odyssey.honored-metal-sword": "Honored Metal Sword",
 
@@ -15,6 +18,17 @@
   "item.odyssey.honored-metal-fragment": "Honored Fragment",
   "item.odyssey.righteous-alloy": "Righteous Alloy",
   "item.odyssey.imbued-fabric": "Imbued Fabric",
+  "item.odyssey.auric-fabric": "Auric Fabric",
+  "item.odyssey.atlas-fabric": "Atlas Fabric",
 
-  "entity.odyssey.han-d": "Han-D"
+  "item.odyssey.conqueror-helmet": "Conqueror's Helm",
+  "item.odyssey.conqueror-chestplate": "Conqueror's Chestpiece",
+  "item.odyssey.conqueror-leggings": "Conqueror's Leggings",
+  "item.odyssey.conqueror-boots": "Conqueror's Boots",
+
+  "entity.odyssey.han-d": "Han-D",
+  "tooltip.odyssey.hadean-greataxe": "The most destructive of the three. Each hit causes the enemy to explode, scaling with the axe's cooldown. Right click to cast a large destructive fireball.",
+  "tooltip.odyssey.guided-scythe": "The most versatile of the three. You regenerate health after each hit, also gaining 10 seconds of speed. Right click to throw the scythe, slicing through enemies to and fro. It will return to you after a short period of time.",
+  "tooltip.odyssey.righteous-blade": "The most noble of the three. Grants strength II on hit. Right click to fire a relic bolt. Shift right clicking heals the bearer and grants resistance II, strength III, and regeneration for 30 seconds. The swords power will be depleted for 60 seconds after using the second ability, meaning you cannot fire relic bolts until it regains it's power.",
+  "tooltip.odyssey.righteous-guard": "The Righteous brother. Acts as a normal shield on it's own. United with it's brother, the Righteous Blade, It grants the wielder with enhanced physical ability."
 }

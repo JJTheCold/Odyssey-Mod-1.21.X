@@ -1,13 +1,19 @@
 package net.thebastion.odyssey;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.thebastion.odyssey.block.ModBlocks;
 import net.thebastion.odyssey.entity.ModEntities;
 import net.thebastion.odyssey.entity.client.HanDRenderer;
+import net.thebastion.odyssey.entity.client.RelicBoltRenderer;
+import net.thebastion.odyssey.entity.client.ScytheProjectileRenderer;
+import net.thebastion.odyssey.entity.custom.ScytheProjectile;
 import net.thebastion.odyssey.item.ModCreativeModeTabs;
 import net.thebastion.odyssey.item.ModItemProperties;
 import net.thebastion.odyssey.item.ModItems;
 import net.thebastion.odyssey.loot.ModLootModifiers;
+import net.thebastion.odyssey.particle.AxeHitParticle;
+import net.thebastion.odyssey.particle.ModParticles;
 import net.thebastion.odyssey.registries.LootRegistry;
 import org.slf4j.Logger;
 
@@ -57,6 +63,7 @@ public class Odyssey {
         ModEntities.register(modEventBus);
         ModSounds.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         LootRegistry.register(modEventBus);
 
@@ -74,6 +81,7 @@ public class Odyssey {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
     }
 
+
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
@@ -85,7 +93,13 @@ public class Odyssey {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.HAN_D.get(), HanDRenderer::new);
+            EntityRenderers.register(ModEntities.SCYTHE_PROJECTILE.get(), ScytheProjectileRenderer::new);
+            EntityRenderers.register(ModEntities.RELIC_BOLT.get(), RelicBoltRenderer::new);
             ModItemProperties.addCustomItemProperties();
+        }
+        @SubscribeEvent
+        public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.AXE_HIT_PARTICLE.get(), AxeHitParticle.Provider::new);
         }
     }
 }

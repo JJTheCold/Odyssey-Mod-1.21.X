@@ -1,5 +1,6 @@
 package net.thebastion.odyssey.entity.custom;
 
+import com.mojang.blaze3d.shaders.Effect;
 import net.minecraft.core.Holder;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;

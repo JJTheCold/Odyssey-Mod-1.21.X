@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "odyssey:item/huge-weapon",
+    "textures": {
+      "layer0": "odyssey:item/guided-scythe"
+    }
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "minecraft:item/handheld",
+      "textures": {
+        "layer0": "odyssey:item/guided-scythe-gui"
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-package net.thebastion.odyssey.item.Items;
+package net.thebastion.odyssey.item.custom;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +15,7 @@ public class RecipeBook extends Item {
 
     @Override
     public boolean hasCraftingRemainingItem(ItemStack stack) {
-        return stack.getDamageValue() < stack.getMaxDamage();
+        return true;
     }
 
     @Override

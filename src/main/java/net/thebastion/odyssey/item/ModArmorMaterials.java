@@ -18,12 +18,12 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class ModArmorMaterials {
-    public static final Holder<ArmorMaterial> HONORED_ARMOR_MATERIAL = register("cobalt",
+    public static final Holder<ArmorMaterial> GUARDIAN_ARMOR_MATERIAL = register("conqueror",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 4);
-                attribute.put(ArmorItem.Type.LEGGINGS, 7);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 8);
-                attribute.put(ArmorItem.Type.HELMET, 4);
+                attribute.put(ArmorItem.Type.BOOTS, 5);
+                attribute.put(ArmorItem.Type.LEGGINGS, 8);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 9);
+                attribute.put(ArmorItem.Type.HELMET, 5);
                 attribute.put(ArmorItem.Type.BODY, 13);
             }), 10, 1.5f, 0.05f, ModItems.HONORED_METAL::get);
 
@@ -34,8 +34,8 @@ public class ModArmorMaterials {
             int enchantability,
             float toughness,
             float knockbackResistance,
-            Supplier<Item> ingredientItem)
-    {
+
+            Supplier<Item> ingredientItem) {
         ResourceLocation location = ResourceLocation.fromNamespaceAndPath(Odyssey.MODID, name);
         Holder<SoundEvent> equipSound = SoundEvents.ARMOR_EQUIP_NETHERITE;
         Supplier<Ingredient> ingredient = () -> Ingredient.of(ingredientItem.get());
@@ -45,7 +45,6 @@ public class ModArmorMaterials {
         for (ArmorItem.Type type : ArmorItem.Type.values()) {
             typeMap.put(type, typeProtection.get(type));
         }
-
         return Registry.registerForHolder(BuiltInRegistries.ARMOR_MATERIAL, location,
                 new ArmorMaterial(typeProtection, enchantability, equipSound, ingredient, layers, toughness, knockbackResistance));
     }

@@ -7,6 +7,7 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.thebastion.odyssey.Odyssey;
 import net.thebastion.odyssey.entity.ModEntities;
 import net.thebastion.odyssey.entity.client.HanDModel;
+import net.thebastion.odyssey.entity.client.RelicBoltModel;
 import net.thebastion.odyssey.entity.custom.HanD;
 
 @EventBusSubscriber(modid = Odyssey.MODID, bus = EventBusSubscriber.Bus.MOD)
@@ -14,6 +15,7 @@ public class ModEventBusEvents {
         @SubscribeEvent
         public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
             event.registerLayerDefinition(HanDModel.LAYER_LOCATION, HanDModel::createBodyLayer);
+            event.registerLayerDefinition(RelicBoltModel.LAYER_LOCATION, RelicBoltModel::createBodyLayer);
         }
 
         @SubscribeEvent
