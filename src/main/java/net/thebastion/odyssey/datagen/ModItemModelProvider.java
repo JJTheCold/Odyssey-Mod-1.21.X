@@ -1,6 +1,7 @@
 package net.thebastion.odyssey.datagen;
 
 import net.thebastion.odyssey.Odyssey;
+import net.thebastion.odyssey.block.ModBlocks;
 import net.thebastion.odyssey.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -23,6 +24,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         //wallItem(ModBlocks.BISMUTH_WALL, ModBlocks.BISMUTH_BLOCK);
 
         withExistingParent(ModItems.HAN_D_SPAWNER.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.BURIED_SPAWNER.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.BURIED_LESSER_SPAWNER.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+        wallItem(ModBlocks.KRUXROCK_TILE_WALL, ModBlocks.KRUXROCK_TILE);
+        wallItem(ModBlocks.KRUXROCK_BRICK_WALL, ModBlocks.KRUXROCK_BRICKS);
+        wallItem(ModBlocks.POLISHED_KRUXROCK_WALL, ModBlocks.POLISHED_KRUXROCK);
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {

@@ -1,0 +1,5 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#odyssey:has_structure/buried-relic",
+  "structures": "odyssey:buried-relic"
+}

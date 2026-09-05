@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "odyssey:block/kruxrock-pillar-horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "odyssey:block/kruxrock-pillar"
+    },
+    "axis=z": {
+      "model": "odyssey:block/kruxrock-pillar-horizontal",
+      "x": 90
+    }
+  }
+}

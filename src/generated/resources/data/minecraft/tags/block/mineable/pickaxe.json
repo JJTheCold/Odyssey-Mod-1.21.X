@@ -1,3 +1,14 @@
 {
-  "values": []
+  "values": [
+    "odyssey:kruxrock",
+    "odyssey:kruxrock-bricks",
+    "odyssey:kruxrock-pillar",
+    "odyssey:kruxrock-tile",
+    "odyssey:block-of-honored-metal",
+    "odyssey:studded-kruxrock-pillar",
+    "odyssey:studded-kruxrock-bricks",
+    "odyssey:studded-kruxrock-tile",
+    "odyssey:honored-deposit",
+    "odyssey:polished-kruxrock"
+  ]
 }

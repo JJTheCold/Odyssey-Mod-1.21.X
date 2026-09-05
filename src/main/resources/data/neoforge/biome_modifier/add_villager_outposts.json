@@ -1,0 +1,5 @@
+{
+  "type": "neoforge:add_structures",
+  "biomes": "#odyssey:has_structure/villager-outpost",
+  "structures": "odyssey:villager-outpost"
+}

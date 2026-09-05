@@ -1,0 +1,6 @@
+{
+  "name": "odyssey:buried-relic/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+  ]
+}

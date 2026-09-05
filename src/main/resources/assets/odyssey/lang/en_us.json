@@ -1,13 +1,19 @@
 {
   "item.odyssey.han-d-spawner": "Han-D Spawn Egg",
+  "item.odyssey.buried-spawner": "Buried Spawn Egg",
+  "item.odyssey.buried-lesser-spawner": "Buried Lesser Spawn Egg",
 
   "itemgroup.odyssey.odyssey": "Odyssey",
 
+  "item.odyssey.staff-of-the-deep": "Staff of the Deep",
   "item.odyssey.guided-scythe": "Guided Scythe",
-  "item.odyssey.righteous-guard": "Righteous Guard",
+
   "item.odyssey.hadean-greataxe": "Hadean GreatAxe",
+  "item.odyssey.ground-breaker": "Groundbreaker",
 
   "item.odyssey.righteous-blade": "Righteous Blade",
+  "item.odyssey.righteous-guard": "Righteous Guard",
+
   "item.odyssey.honored-metal-sword": "Honored Metal Sword",
 
   "item.odyssey.ancient-recipe-book": "Ancient Recipe Manuscript",
@@ -26,9 +32,36 @@
   "item.odyssey.conqueror-leggings": "Conqueror's Leggings",
   "item.odyssey.conqueror-boots": "Conqueror's Boots",
 
+  "block.odyssey.block-of-honored-metal": "Block of Honored Metal",
+  "block.odyssey.goldlichen": "Goldlichen",
+  "block.odyssey.kruxrock": "Kruxrock",
+  "block.odyssey.studded-kruxrock-pillar": "Studded Kruxrock Pillar",
+  "block.odyssey.studded-kruxrock-tile": "Studded Kruxrock Tile",
+  "block.odyssey.studded-kruxrock-bricks": "Studded Kruxrock Bricks",
+  "block.odyssey.kruxrock-pillar": "Kruxrock Pillar",
+  "block.odyssey.honored-deposit": "Kruxrock Deposit",
+
+  "block.odyssey.kruxrock-bricks": "Kruxrock Bricks",
+  "block.odyssey.kruxrock-brick-wall": "Kruxrock Brick Wall",
+  "block.odyssey.kruxrock-brick-stairs": "Kruxrock Brick Stairs",
+  "block.odyssey.kruxrock-brick-slab": "Kruxrock Brick Slab",
+
+  "block.odyssey.kruxrock-tile": "Kruxrock Tile",
+  "block.odyssey.kruxrock-tile-wall": "Kruxrock Tile Wall",
+  "block.odyssey.kruxrock-tile-stairs": "Kruxrock Tile Stairs",
+  "block.odyssey.kruxrock-tile-slab": "Kruxrock Tile Slab",
+
+  "block.odyssey.polished-kruxrock": "Polished Kruxrock",
+  "block.odyssey.polished-kruxrock-wall": "Polished Kruxrock Wall",
+  "block.odyssey.polished-kruxrock-stairs": "Polished Kruxrock Stairs",
+  "block.odyssey.polished-kruxrock-slab": "Polished Kruxrock Slab",
+
   "entity.odyssey.han-d": "Han-D",
+  "entity.odyssey.buried-warrior": "Buried Warrior",
+  "entity.odyssey.buried-lesser": "Buried",
   "tooltip.odyssey.hadean-greataxe": "The most destructive of the three. Each hit causes the enemy to explode, scaling with the axe's cooldown. Right click to cast a large destructive fireball.",
   "tooltip.odyssey.guided-scythe": "The most versatile of the three. You regenerate health after each hit, also gaining 10 seconds of speed. Right click to throw the scythe, slicing through enemies to and fro. It will return to you after a short period of time.",
-  "tooltip.odyssey.righteous-blade": "The most noble of the three. Grants strength II on hit. Right click to fire a relic bolt. Shift right clicking heals the bearer and grants resistance II, strength III, and regeneration for 30 seconds. The swords power will be depleted for 60 seconds after using the second ability, meaning you cannot fire relic bolts until it regains it's power.",
-  "tooltip.odyssey.righteous-guard": "The Righteous brother. Acts as a normal shield on it's own. United with it's brother, the Righteous Blade, It grants the wielder with enhanced physical ability."
+  "tooltip.odyssey.righteous-blade": "The most noble of the three. Grants strength II on hit. Right click to fire a relic bolt. Shift right clicking heals the bearer and grants resistance II, strength III, and regeneration for 30 seconds. The sword's power will be depleted for 60 seconds after using the second ability, meaning you cannot fire relic bolts until it regains it's power.",
+  "tooltip.odyssey.righteous-guard": "The Righteous brother. Acts as a normal shield on it's own. United with it's brother, the Righteous Blade, It grants the wielder with enhanced physical ability.",
+  "tooltip.odyssey.ground-breaker": "This pickaxe can either mine in a 3x3x1 area, and a single block when shifting. You are also able to right click to switch between modes. Right clicking on the ground starts small fire, and similar to the Hadean Greataxe, this tool also ignites enemies on hit."
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "odyssey:block/studded-kruxrock-pillar-top",
+    "side": "odyssey:block/studded-kruxrock-pillar"
+  }
+}

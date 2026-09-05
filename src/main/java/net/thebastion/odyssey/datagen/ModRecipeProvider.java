@@ -7,6 +7,8 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.thebastion.odyssey.Odyssey;
+import net.thebastion.odyssey.block.ModBlocks;
+import net.thebastion.odyssey.item.ModItems;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -18,6 +20,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_HONORED_METAL.get())
+                .pattern("HHH")
+                .pattern("HHH")
+                .pattern("HHH")
+                .define('H', ModItems.HONORED_METAL.get());
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.HONORED_METAL.get(), 9)
+                .requires(ModBlocks.BLOCK_OF_HONORED_METAL);
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

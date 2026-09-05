@@ -1,5 +1,6 @@
 package net.thebastion.odyssey.item;
 
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
@@ -11,7 +12,6 @@ import net.thebastion.odyssey.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Odyssey.MODID);
-    //Odyssey
 
     public static final DeferredItem<Item> RIGHTEOUS_ALLOY = ITEMS.register("righteous-alloy",
             () -> new Item(new Item.Properties()
@@ -51,38 +51,56 @@ public class ModItems {
     public static final DeferredItem<RighteousGuard> RIGHTEOUS_GUARD = ITEMS.register("righteous-guard",
             () -> new RighteousGuard(new Item.Properties()
                     .durability(3200)
+                    .stacksTo(1)
                     .fireResistant()
                     .rarity(Rarity.EPIC)
             ));
+
     public static final DeferredItem<SwordItem> RIGHTEOUS_BLADE = ITEMS.register("righteous-blade",
             () -> new RighteousWeapon(ModToolTiers.RIGHTEOUS, new Item.Properties()
                     .fireResistant()
                     .rarity(Rarity.EPIC)
+                    .component(DataComponents.TOOL, SwordItem.createToolProperties())
 
                     .attributes(SwordItem.createAttributes
                             (ModToolTiers.RIGHTEOUS, 3, -2.2f))
             ));
-    public static final DeferredItem<AxeItem> HADEAN_GREATAXE = ITEMS.register("hadean-greataxe",
-            () -> new HadeanWeapon(ModToolTiers.RIGHTEOUS,
-                    new Item.Properties()
 
+    public static final DeferredItem<PickaxeItem> GROUNDBREAKER = ITEMS.register("ground-breaker",
+            () -> new GroundBreaker(ModToolTiers.RIGHTEOUS, new Item.Properties()
+                    .fireResistant()
+                    .rarity(Rarity.EPIC)
+                    .durability(7200)
+                    .attributes(SwordItem.createAttributes
+                            (ModToolTiers.RIGHTEOUS, 2, -3f))
+            ));
+    public static final DeferredItem<AxeItem> HADEAN_GREATAXE = ITEMS.register("hadean-greataxe",
+            () -> new HadeanWeapon(ModToolTiers.RIGHTEOUS, new Item.Properties()
                     .fireResistant()
                     .rarity(Rarity.EPIC)
 
                     .attributes(AxeItem.createAttributes
-                            (ModToolTiers.RIGHTEOUS, 10, -3.2f)
-                    )
-
+                            (ModToolTiers.RIGHTEOUS, 10, -3.2f))
             ));
     public static final DeferredItem<Item> GUIDED_SCYTHE = ITEMS.register("guided-scythe",
             () -> new GuidedWeapon(ModToolTiers.RIGHTEOUS,
                     new Item.Properties()
-
                             .fireResistant()
                             .rarity(Rarity.EPIC)
+                            .durability(0)
 
                             .attributes(SwordItem.createAttributes
                                     (ModToolTiers.RIGHTEOUS, 5, -2.8f)
+                            )
+
+            ));
+    public static final DeferredItem<Item> OCEAN_STAFF = ITEMS.register("staff-of-the-deep",
+            () -> new SwordItem(ModToolTiers.RIGHTEOUS,
+                    new Item.Properties()
+                            .fireResistant()
+                            .rarity(Rarity.EPIC)
+                            .attributes(SwordItem.createAttributes
+                                    (ModToolTiers.RIGHTEOUS, 2, -3.5f)
                             )
 
             ));
@@ -90,6 +108,7 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.HONORED, new Item.Properties()
                     .fireResistant()
                     .rarity(Rarity.RARE)
+                    .component(DataComponents.TOOL, SwordItem.createToolProperties())
 
                     .attributes(SwordItem.createAttributes
                             (Tiers.DIAMOND, 3, -2.2f))
@@ -114,6 +133,14 @@ public class ModItems {
     public static final DeferredItem<Item> HAN_D_SPAWNER = ITEMS.register("han-d-spawner",
             () -> new DeferredSpawnEggItem(ModEntities.HAN_D, 0x9b4b3c, 0x96b2a9,
             new Item.Properties()));
+
+    public static final DeferredItem<Item> BURIED_SPAWNER = ITEMS.register("buried-spawner",
+            () -> new DeferredSpawnEggItem(ModEntities.BURIED, 0x585250, 0xdcdcdc,
+                    new Item.Properties()));
+
+    public static final DeferredItem<Item> BURIED_LESSER_SPAWNER = ITEMS.register("buried-lesser-spawner",
+            () -> new DeferredSpawnEggItem(ModEntities.BURIED_LESSER, 0x585250, 0x7f7f7f,
+                    new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

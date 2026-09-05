@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "odyssey:kruxrock"
+  },
+  "result": {
+    "count": 1,
+    "id": "odyssey:kruxrock-tile-stairs"
+  }
+}

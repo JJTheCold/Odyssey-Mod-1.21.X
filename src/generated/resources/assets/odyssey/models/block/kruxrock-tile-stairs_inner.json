@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "odyssey:block/kruxrock-tile",
+    "side": "odyssey:block/kruxrock-tile",
+    "top": "odyssey:block/kruxrock-tile"
+  }
+}

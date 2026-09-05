@@ -32,7 +32,7 @@ import org.jetbrains.annotations.NotNull;
 import java.awt.*;
 import java.util.List;
 
-public class GuidedWeapon extends SwordItem {
+public class GuidedWeapon extends HoeItem {
     public GuidedWeapon(Tier tier, Properties properties) {
         super(tier, properties);
     }
@@ -74,6 +74,11 @@ public class GuidedWeapon extends SwordItem {
     @Override
     public int getEnchantmentValue() {
         return 1;
+    }
+
+    @Override
+    public void setDamage(ItemStack stack, int damage){
+        super.setDamage(stack, 0);
     }
 
     @Override

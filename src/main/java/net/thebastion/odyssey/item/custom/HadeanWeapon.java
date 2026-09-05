@@ -93,6 +93,11 @@ public class HadeanWeapon extends AxeItem {
     }
 
     @Override
+    public void setDamage(ItemStack stack, int damage){
+        super.setDamage(stack, 0);
+    }
+
+    @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (level.isClientSide) {
             return InteractionResultHolder.success(player.getItemInHand(hand));
@@ -118,6 +123,7 @@ public class HadeanWeapon extends AxeItem {
 
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), false);
     }
+
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext context, List<Component> lines, TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, context, lines, pIsAdvanced);

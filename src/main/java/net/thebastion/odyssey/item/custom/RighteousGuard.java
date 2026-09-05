@@ -23,6 +23,7 @@ public class RighteousGuard extends ShieldItem {
         super(new Properties()
                 .fireResistant()
                 .rarity(Rarity.EPIC)
+                .durability(3200)
         );
     }
     @Override
@@ -38,10 +39,6 @@ public class RighteousGuard extends ShieldItem {
         return super.hurtEnemy(stack, target, attacker);
     }
 
-    @Override
-    public void onUseTick(Level level, LivingEntity livingEntity, ItemStack stack, int remainingUseDuration) {
-        super.onUseTick(level, livingEntity, stack, remainingUseDuration);
-    }
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext context, List<Component> lines, TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, context, lines, pIsAdvanced);

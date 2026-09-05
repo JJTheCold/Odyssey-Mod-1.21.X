@@ -1,0 +1,134 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made by JJ",
+	"parent": "minecraft:item/handheld",
+	"loader": "neoforge:separate_transforms",
+	"base": {
+		"texture_size": [64, 64],
+		"textures": {
+			"1": "odyssey/item/staff-of-the-deep-texture"
+		},
+		"elements": [
+			{
+				"from": [7, -13, 7],
+				"to": [9, 15, 9],
+				"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+				"faces": {
+					"north": {"uv": [0.5, 4.5, 1, 11.5], "texture": "#1"},
+					"east": {"uv": [0, 4.5, 0.5, 11.5], "texture": "#1"},
+					"south": {"uv": [1.5, 4.5, 2, 11.5], "texture": "#1"},
+					"west": {"uv": [1, 4.5, 1.5, 11.5], "texture": "#1"},
+					"up": {"uv": [1, 4.5, 0.5, 4], "texture": "#1"},
+					"down": {"uv": [1.5, 4, 1, 4.5], "texture": "#1"}
+				}
+			},
+			{
+				"from": [4, 11, 7],
+				"to": [12, 15, 9],
+				"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+				"faces": {
+					"north": {"uv": [2.5, 7.5, 4.5, 8.5], "texture": "#1"},
+					"east": {"uv": [2, 7.5, 2.5, 8.5], "texture": "#1"},
+					"south": {"uv": [5, 7.5, 7, 8.5], "texture": "#1"},
+					"west": {"uv": [4.5, 7.5, 5, 8.5], "texture": "#1"},
+					"up": {"uv": [4.5, 7.5, 2.5, 7], "texture": "#1"},
+					"down": {"uv": [6.5, 7, 4.5, 7.5], "texture": "#1"}
+				}
+			},
+			{
+				"from": [4, -15.5, 7],
+				"to": [12, -11.5, 9],
+				"rotation": {"angle": 0, "axis": "y", "origin": [7, -26.5, 7]},
+				"faces": {
+					"north": {"uv": [2.5, 7.5, 4.5, 8.5], "texture": "#1"},
+					"east": {"uv": [2, 7.5, 2.5, 8.5], "texture": "#1"},
+					"south": {"uv": [5, 7.5, 7, 8.5], "texture": "#1"},
+					"west": {"uv": [4.5, 7.5, 5, 8.5], "texture": "#1"},
+					"up": {"uv": [4.5, 7.5, 2.5, 7], "texture": "#1"},
+					"down": {"uv": [6.5, 7, 4.5, 7.5], "texture": "#1"}
+				}
+			},
+			{
+				"from": [6.5, -16, 6.5],
+				"to": [9.5, -8, 9.5],
+				"rotation": {"angle": 0, "axis": "y", "origin": [6.5, 0, 6.5]},
+				"faces": {
+					"north": {"uv": [10.75, 7.75, 11.5, 9.75], "texture": "#1"},
+					"east": {"uv": [10, 7.75, 10.75, 9.75], "texture": "#1"},
+					"south": {"uv": [12.25, 7.75, 13, 9.75], "texture": "#1"},
+					"west": {"uv": [11.5, 7.75, 12.25, 9.75], "texture": "#1"},
+					"up": {"uv": [11.5, 7.75, 10.75, 7], "texture": "#1"},
+					"down": {"uv": [12.25, 7, 11.5, 7.75], "texture": "#1"}
+				}
+			},
+			{
+				"from": [6.5, 7, 6.5],
+				"to": [9.5, 15, 9.5],
+				"rotation": {"angle": 0, "axis": "y", "origin": [6.5, 23, 6.5]},
+				"faces": {
+					"north": {"uv": [7.75, 7.75, 8.5, 9.75], "texture": "#1"},
+					"east": {"uv": [7, 7.75, 7.75, 9.75], "texture": "#1"},
+					"south": {"uv": [9.25, 7.75, 10, 9.75], "texture": "#1"},
+					"west": {"uv": [8.5, 7.75, 9.25, 9.75], "texture": "#1"},
+					"up": {"uv": [8.5, 7.75, 7.75, 7], "texture": "#1"},
+					"down": {"uv": [9.25, 7, 8.5, 7.75], "texture": "#1"}
+				}
+			},
+			{
+				"from": [4, 15, 4],
+				"to": [12, 23, 12],
+				"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+				"faces": {
+					"north": {"uv": [2, 2, 4, 4], "texture": "#1"},
+					"east": {"uv": [0, 2, 2, 4], "texture": "#1"},
+					"south": {"uv": [6, 2, 8, 4], "texture": "#1"},
+					"west": {"uv": [4, 2, 6, 4], "texture": "#1"},
+					"up": {"uv": [4, 2, 2, 0], "texture": "#1"},
+					"down": {"uv": [6, 0, 4, 2], "texture": "#1"}
+				}
+			},
+			{
+				"from": [5, 16, 5],
+				"to": [11, 22, 11],
+				"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+				"faces": {
+					"north": {"uv": [3.5, 5.5, 5, 7], "texture": "#1"},
+					"east": {"uv": [2, 5.5, 3.5, 7], "texture": "#1"},
+					"south": {"uv": [6.5, 5.5, 8, 7], "texture": "#1"},
+					"west": {"uv": [5, 5.5, 6.5, 7], "texture": "#1"},
+					"up": {"uv": [5, 5.5, 3.5, 4], "texture": "#1"},
+					"down": {"uv": [6.5, 4, 5, 5.5], "texture": "#1"}
+				}
+			}
+		],
+		"display": {
+			"thirdperson_righthand": {
+				"rotation": [0, 90, 0],
+				"translation": [-0.75, 7.25, 1.25]
+			},
+			"firstperson_righthand": {
+				"rotation": [-0.92, 6.17, -7.47],
+				"translation": [3.13, 6.95, 1.13],
+				"scale": [0.68, 0.68, 0.68]
+			},
+			"firstperson_lefthand": {
+				"rotation": [-0.92, 6.17, -7.47],
+				"translation": [3.13, 6.95, 1.13],
+				"scale": [0.68, 0.68, 0.68]
+			},
+			"ground": {
+				"rotation": [90, 0, 0],
+				"translation": [0, 2, 2.5],
+				"scale": [0.5, 0.5, 0.5]
+			}
+		}
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "minecraft:item/handheld",
+			"textures": {
+				"layer0": "odyssey:item/staff-of-the-deep-gui"
+			}
+		}
+	}
+}

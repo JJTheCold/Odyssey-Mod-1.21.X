@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "odyssey:block/kruxrock-top",
+    "side": "odyssey:block/kruxrock"
+  }
+}

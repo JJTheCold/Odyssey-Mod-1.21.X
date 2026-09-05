@@ -1,0 +1,5 @@
+{
+  "type": "neoforge:add_structures",
+  "biomes": "#odyssey:has_structure/old-growth-ruins",
+  "structures": "odyssey:old-growth-ruins"
+}

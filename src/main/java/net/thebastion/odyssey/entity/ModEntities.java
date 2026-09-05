@@ -6,9 +6,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.thebastion.odyssey.Odyssey;
-import net.thebastion.odyssey.entity.custom.HanD;
-import net.thebastion.odyssey.entity.custom.RelicBolt;
-import net.thebastion.odyssey.entity.custom.ScytheProjectile;
+import net.thebastion.odyssey.entity.custom.*;
 
 import java.util.function.Supplier;
 
@@ -22,6 +20,18 @@ public class ModEntities {
     public static final Supplier<EntityType<HanD>> HAN_D =
             ENTITY_TYPES.register("han-d", () -> EntityType.Builder.of(HanD::new, MobCategory.MISC)
                     .sized(1.2f, 3f).build("han-d"));
+
+    public static final Supplier<EntityType<Buried>> BURIED =
+            ENTITY_TYPES.register("buried", () -> EntityType.Builder.of(Buried::new, MobCategory.MISC)
+                    .sized(0.75f, 1.9f).build("buried"));
+
+    public static final Supplier<EntityType<BuriedLesser>> BURIED_LESSER =
+            ENTITY_TYPES.register("buried-lesser", () -> EntityType.Builder.of(BuriedLesser::new, MobCategory.MISC)
+                    .sized(0.75f, 2f).build("buried-lesser"));
+
+    public static final Supplier<EntityType<Champion>> CHAMPION =
+            ENTITY_TYPES.register("champion", () -> EntityType.Builder.of(Champion::new, MobCategory.MISC)
+                    .sized(1.5f, 4.5f).build("champion"));
 
     public static final Supplier<EntityType<ScytheProjectile>> SCYTHE_PROJECTILE =
             ENTITY_TYPES.register("scythe-projectile", () -> EntityType.Builder.<ScytheProjectile>of(ScytheProjectile::new, MobCategory.MISC)

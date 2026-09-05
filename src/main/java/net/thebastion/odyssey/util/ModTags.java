@@ -11,7 +11,10 @@ import net.thebastion.odyssey.Odyssey;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> NEEDS_HONORED_TOOL = createTag("needs_honored_metal_tool");
+        public static final TagKey<Block> NEEDS_RIGHTEOUS_TOOL = createTag("needs_righteous_tool");
         public static final TagKey<Block> INCORRECT_FOR_HONORED_TOOL = createTag("needs_honored_metal_tool");
+        public static final TagKey<Block> KRUX_REPLACEABLE = createTag("kruxrock-replaceable");
+        public static final TagKey<Block> IN_STONE = createTag("in-stone");
 
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Odyssey.MODID, name));

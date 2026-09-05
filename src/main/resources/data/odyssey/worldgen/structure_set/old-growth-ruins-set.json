@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "odyssey:old-growth-ruins",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 514659267,
+    "separation": 4,
+    "spacing": 10
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "odyssey:polished-kruxrock"
+  },
+  "result": {
+    "count": 1,
+    "id": "odyssey:polished-kruxrock-wall"
+  }
+}

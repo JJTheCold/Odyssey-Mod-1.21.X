@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "odyssey:buried-old-growth-remnant",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 514659267,
+    "separation": 2,
+    "spacing": 10
+  }
+}

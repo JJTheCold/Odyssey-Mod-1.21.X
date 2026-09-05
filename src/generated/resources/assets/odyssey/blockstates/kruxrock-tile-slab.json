@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "odyssey:block/kruxrock-tile-slab"
+    },
+    "type=double": {
+      "model": "odyssey:block/kruxrock-tile"
+    },
+    "type=top": {
+      "model": "odyssey:block/kruxrock-tile-slab_top"
+    }
+  }
+}

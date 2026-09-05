@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "odyssey:block/polished-kruxrock",
+    "side": "odyssey:block/polished-kruxrock",
+    "top": "odyssey:block/polished-kruxrock"
+  }
+}

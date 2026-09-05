@@ -4,10 +4,13 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.thebastion.odyssey.block.ModBlocks;
 import net.thebastion.odyssey.entity.ModEntities;
-import net.thebastion.odyssey.entity.client.HanDRenderer;
+import net.thebastion.odyssey.entity.client.buried.BuriedRenderer;
+import net.thebastion.odyssey.entity.client.buried.lesser.BuriedLesserRenderer;
+import net.thebastion.odyssey.entity.client.champion.ChampionRenderer;
+import net.thebastion.odyssey.entity.client.han_d.HanDRenderer;
 import net.thebastion.odyssey.entity.client.RelicBoltRenderer;
 import net.thebastion.odyssey.entity.client.ScytheProjectileRenderer;
-import net.thebastion.odyssey.entity.custom.ScytheProjectile;
+import net.thebastion.odyssey.entity.custom.BuriedLesser;
 import net.thebastion.odyssey.item.ModCreativeModeTabs;
 import net.thebastion.odyssey.item.ModItemProperties;
 import net.thebastion.odyssey.item.ModItems;
@@ -15,6 +18,7 @@ import net.thebastion.odyssey.loot.ModLootModifiers;
 import net.thebastion.odyssey.particle.AxeHitParticle;
 import net.thebastion.odyssey.particle.ModParticles;
 import net.thebastion.odyssey.registries.LootRegistry;
+import net.thebastion.odyssey.sound.ModSounds;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -92,7 +96,10 @@ public class Odyssey {
     static class ClientModEvents {
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.BURIED.get(), BuriedRenderer::new);
+            EntityRenderers.register(ModEntities.BURIED_LESSER.get(), BuriedLesserRenderer::new);
             EntityRenderers.register(ModEntities.HAN_D.get(), HanDRenderer::new);
+            EntityRenderers.register(ModEntities.CHAMPION.get(), ChampionRenderer::new);
             EntityRenderers.register(ModEntities.SCYTHE_PROJECTILE.get(), ScytheProjectileRenderer::new);
             EntityRenderers.register(ModEntities.RELIC_BOLT.get(), RelicBoltRenderer::new);
             ModItemProperties.addCustomItemProperties();

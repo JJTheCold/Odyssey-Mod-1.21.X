@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "odyssey:block/kruxrock-bricks",
+    "side": "odyssey:block/kruxrock-bricks",
+    "top": "odyssey:block/kruxrock-bricks"
+  }
+}

@@ -21,11 +21,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(ModTags.Items.TRANSFORMABLE_ITEMS)
-                .add(Items.COAL)
-                .add(Items.STICK)
-                .add(Items.COMPASS);
-
         tag(ModTags.Items.ANCIENT_SCHEMATIC)
                 .add(ModItems.BURIED_SCHEMATIC.get())
                 .add(ModItems.ANCIENT_RECIPE_BOOK.get());

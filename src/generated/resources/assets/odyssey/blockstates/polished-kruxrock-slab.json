@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "odyssey:block/polished-kruxrock-slab"
+    },
+    "type=double": {
+      "model": "odyssey:block/polished-kruxrock"
+    },
+    "type=top": {
+      "model": "odyssey:block/polished-kruxrock-slab_top"
+    }
+  }
+}

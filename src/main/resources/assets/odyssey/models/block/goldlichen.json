@@ -1,0 +1,38 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made by JJ",
+	"texture_size": [64, 64],
+	"render_type": "cutout",
+	"textures": {
+		"1": "odyssey:block/goldlichen",
+		"particle": "odyssey:item/goldlichen-item"
+	},
+	"elements": [
+		{
+			"from": [-0.2, -0.125, -3.675],
+			"to": [16.2, 16.275, 0.725],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.075, -0.5]},
+			"faces": {
+				"north": {"uv": [1, 1, 5, 5], "texture": "#1"},
+				"east": {"uv": [0, 1, 1, 5], "texture": "#1"},
+				"south": {"uv": [6, 1, 10, 5], "texture": "#1"},
+				"west": {"uv": [5, 1, 6, 5], "texture": "#1"},
+				"up": {"uv": [5, 1, 1, 0], "texture": "#1"},
+				"down": {"uv": [9, 0, 5, 1], "texture": "#1"}
+			}
+		},
+		{
+			"from": [0, 0.075, 0.375],
+			"to": [16, 16.075, 0.375],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8.075, -0.6]},
+			"faces": {
+				"north": {"uv": [0.5, 5.25, 4.5, 9.25], "texture": "#1"},
+				"east": {"uv": [0.5, 5.25, 0.5, 9.25], "texture": "#1"},
+				"south": {"uv": [4.5, 5.25, 8.5, 9.25], "texture": "#1"},
+				"west": {"uv": [4.5, 5.25, 4.5, 9.25], "texture": "#1"},
+				"up": {"uv": [4.5, 5.25, 0.5, 5.25], "texture": "#1"},
+				"down": {"uv": [8.5, 5.25, 4.5, 5.25], "texture": "#1"}
+			}
+		}
+	]
+}
