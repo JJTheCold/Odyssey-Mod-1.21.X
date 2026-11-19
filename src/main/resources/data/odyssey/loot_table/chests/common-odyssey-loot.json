@@ -75,7 +75,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "odyssey:empty-ancient-recipe-book"
+          "name": "odyssey:empty-ancients-manuscript"
         },
         {
           "type": "minecraft:empty",

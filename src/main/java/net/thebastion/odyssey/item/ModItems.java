@@ -13,6 +13,11 @@ import net.thebastion.odyssey.item.custom.*;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Odyssey.MODID);
 
+    public static final DeferredItem<Item> CORE = ITEMS.register("core",
+            () -> new Item(new Item.Properties()
+                    .rarity(Rarity.EPIC)
+                    .fireResistant()
+            ));
     public static final DeferredItem<Item> RIGHTEOUS_ALLOY = ITEMS.register("righteous-alloy",
             () -> new Item(new Item.Properties()
                     .rarity(Rarity.EPIC)
@@ -26,7 +31,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()
                     .rarity(Rarity.RARE)
             ));
-    public static final DeferredItem<Item> USED_ANCIENT_RECIPE_BOOK = ITEMS.register("empty-ancient-recipe-book",
+    public static final DeferredItem<Item> USED_ANCIENT_RECIPE_BOOK = ITEMS.register("empty-ancients-manuscript",
             () -> new Item(new Item.Properties()
                     .stacksTo(1)
                     .rarity(Rarity.RARE)
@@ -38,15 +43,23 @@ public class ModItems {
                     .rarity(Rarity.UNCOMMON)
                     .fireResistant()
             ));
-    public static final DeferredItem<Item> ANCIENT_RECIPE_BOOK = ITEMS.register("ancient-recipe-book",
+    public static final DeferredItem<Item> ANCIENT_RECIPE_BOOK = ITEMS.register("ancients-manuscript",
             () -> new RecipeBook(new Item.Properties()));
 
-    public static final DeferredItem<Item> IMBUED_FABRIC = ITEMS.register("imbued-fabric",
+    public static final DeferredItem<Item> DEPTH_FABRIC = ITEMS.register("depth-fabric",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> AURIC_FABRIC = ITEMS.register("auric-fabric",
+    public static final DeferredItem<Item> WROUGHT_FABRIC = ITEMS.register("wrought-fabric",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> ATLAS_FABRIC = ITEMS.register("atlas-fabric",
-            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<SwordItem> KNIGHTS_EDGE = ITEMS.register("knights-edge",
+            () -> new SwordItem(ModToolTiers.HONORED, new Item.Properties()
+                    .fireResistant()
+                    .rarity(Rarity.RARE)
+                    .component(DataComponents.TOOL, SwordItem.createToolProperties())
+
+                    .attributes(SwordItem.createAttributes
+                            (ModToolTiers.HONORED, 2, -2.2f))
+            ));
 
     public static final DeferredItem<RighteousGuard> RIGHTEOUS_GUARD = ITEMS.register("righteous-guard",
             () -> new RighteousGuard(new Item.Properties()
@@ -107,11 +120,15 @@ public class ModItems {
     public static final DeferredItem<SwordItem> HONORED_METAL_SWORD = ITEMS.register("honored-metal-sword",
             () -> new SwordItem(ModToolTiers.HONORED, new Item.Properties()
                     .fireResistant()
-                    .rarity(Rarity.RARE)
                     .component(DataComponents.TOOL, SwordItem.createToolProperties())
 
                     .attributes(SwordItem.createAttributes
                             (Tiers.DIAMOND, 3, -2.2f))
+            ));
+
+    public static final DeferredItem<Item> EYE_OF_THE_STORM = ITEMS.register("eye-of-the-storm",
+            () -> new Item(new Item.Properties()
+                    .rarity(Rarity.RARE)
             ));
 
     public static final DeferredItem<ArmorItem> CONQUEROR_HELMET = ITEMS.register("conqueror-helmet",

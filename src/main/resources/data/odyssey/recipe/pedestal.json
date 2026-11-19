@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "odyssey:honored-metal"
+    },
+    "H": {
+      "item": "odyssey:righteous-alloy"
+    },
+    "H": {
+      "item": "odyssey:honored-metal"
+    },
+    "W": {
+      "item": "odyssey:wrought-fabric"
+    }
+  },
+  "pattern": [
+    "HWH",
+    "HHH",
+    "HHH"
+  ],
+  "result": {
+    "count": 1,
+    "id": "odyssey:pedestal"
+  }
+}

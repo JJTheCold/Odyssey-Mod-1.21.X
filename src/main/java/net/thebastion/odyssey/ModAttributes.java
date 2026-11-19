@@ -4,8 +4,6 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class ModAttributes {
 
-    /// Code Adapted from Polarice3/Goety-2 1.20.1
-
     public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
     public static final ModConfigSpec SPEC;
 

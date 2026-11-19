@@ -1,25 +1,38 @@
 package net.thebastion.odyssey.event;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.Tags;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.thebastion.odyssey.Odyssey;
+import net.thebastion.odyssey.accessory.CloakModel;
+import net.thebastion.odyssey.accessory.CloakRenderer;
+import net.thebastion.odyssey.item.ModItems;
 import net.thebastion.odyssey.item.custom.GroundBreaker;
+import net.thebastion.odyssey.item.custom.HadeanWeapon;
 import net.thebastion.odyssey.item.custom.RighteousGuard;
 import net.thebastion.odyssey.item.custom.RighteousWeapon;
+import net.thebastion.odyssey.particle.ModParticles;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @EventBusSubscriber(modid = Odyssey.MODID)
@@ -50,7 +63,7 @@ public class ModEvents {
     }
 
     @SubscribeEvent
-    public static void onPlayerTick(PlayerTickEvent.Post event) {
+    public static void RighteousBrothers(PlayerTickEvent.Post event) {
         Player player = event.getEntity();
         if (player.level().isClientSide()) return;
 
@@ -65,6 +78,82 @@ public class ModEvents {
             player.addEffect(new MobEffectInstance(MobEffects.JUMP, 40 * 4, 1, false, false));
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 40 * 4, 1, false, false));
             player.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 40 * 4, 3, false, false));
+        }
+    }
+
+    @SubscribeEvent
+    public static void Particles (PlayerTickEvent.Post event) {
+        Player player = event.getEntity();
+        Level level = player.level();
+        ItemStack mainHandItem = player.getMainHandItem();
+        if (player.level().isClientSide()) return;
+        if (mainHandItem.getItem() instanceof HadeanWeapon || mainHandItem.getItem() instanceof GroundBreaker) {
+            if (level instanceof ServerLevel serverLevel) {
+                serverLevel.sendParticles(
+                        ModParticles.SPINNING_RED_PARTICLES.get(),
+                        player.getX(), player.getY(0.5D), player.getZ(),
+                        1, 0.5D, 0.5D, 0.5D, 0.5D
+                );
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void oceansBlessing(PlayerTickEvent.Post event) {
+        Player player = event.getEntity();
+        Level level = player.level();
+
+        if (level.isClientSide() || player.tickCount % 40 != 0) {
+            return;
+        }
+
+        ItemStack mainHandItem = player.getMainHandItem();
+
+        if (mainHandItem.getItem() instanceof HadeanWeapon) {
+            if (level instanceof ServerLevel serverLevel) {
+                serverLevel.sendParticles(
+                        ModParticles.SPINNING_RED_PARTICLES.get(),
+                        player.getX(), player.getY(1D), player.getZ(),
+                        2, 0.2D, 0.2D, 0.2D, 0.4D
+                );
+            }
+            if (level instanceof ServerLevel serverLevel) {
+                serverLevel.sendParticles(
+                        ModParticles.RISING_YELLOW_PARTICLES.get(),
+                        player.getX(), player.getY(1D), player.getZ(),
+                        2, 0.4D, 0.4D, 0.4D, 0.4D
+                );
+            }
+
+            AABB searchArea = player.getBoundingBox().inflate(8.0D);
+
+            List<LivingEntity> nearbyTargets = level.getEntitiesOfClass(
+                    LivingEntity.class,
+                    searchArea,
+                    entity -> entity instanceof Enemy && entity.isAlive()
+            );
+
+            int targetsZapped = 0;
+
+            for (LivingEntity target : nearbyTargets) {
+                if (targetsZapped >= 3) {
+                    break;
+                }
+
+                if (target.isInWaterOrRain()) {
+                    target.hurt(level.damageSources().magic(), 4.0F);
+
+                    if (level instanceof ServerLevel serverLevel) {
+                        serverLevel.sendParticles(
+                                ModParticles.SPINNING_RED_PARTICLES.get(),
+                                target.getX(), target.getY(0.5D), target.getZ(),
+                                10, 0.2D, 0.2D, 0.2D, 0.4D
+                        );
+                    }
+
+                    targetsZapped++;
+                }
+            }
         }
     }
 }

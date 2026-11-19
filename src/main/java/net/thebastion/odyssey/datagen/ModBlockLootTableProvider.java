@@ -46,6 +46,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.POLISHED_KRUXROCK_WALL.get());
         dropSelf(ModBlocks.KRUXROCK_BRICK_WALL.get());
         dropSelf(ModBlocks.KRUXROCK_TILE_WALL.get());
+        dropSelf(ModBlocks.ANCIENTS_ALTAR.get());
+        dropSelf(ModBlocks.PEDESTAL.get());
+        dropSelf(ModBlocks.INSCRIBER.get());
 
         add(ModBlocks.HONORED_DEPOSIT.get(),
                 block -> createMultipleOreDrops(ModBlocks.HONORED_DEPOSIT.get(), ModItems.HONORED_METAL_FRAGMENT.get(), 2, 5));

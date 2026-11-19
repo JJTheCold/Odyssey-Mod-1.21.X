@@ -1,8 +1,14 @@
 package net.thebastion.odyssey;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.thebastion.odyssey.accessory.CloakModel;
+import net.thebastion.odyssey.accessory.CloakRenderer;
 import net.thebastion.odyssey.block.ModBlocks;
+import net.thebastion.odyssey.block.entity.renderer.PedestalBlockEntityRenderer;
+import net.thebastion.odyssey.entity.ModBlockEntities;
 import net.thebastion.odyssey.entity.ModEntities;
 import net.thebastion.odyssey.entity.client.buried.BuriedRenderer;
 import net.thebastion.odyssey.entity.client.buried.lesser.BuriedLesserRenderer;
@@ -10,13 +16,14 @@ import net.thebastion.odyssey.entity.client.champion.ChampionRenderer;
 import net.thebastion.odyssey.entity.client.han_d.HanDRenderer;
 import net.thebastion.odyssey.entity.client.RelicBoltRenderer;
 import net.thebastion.odyssey.entity.client.ScytheProjectileRenderer;
-import net.thebastion.odyssey.entity.custom.BuriedLesser;
 import net.thebastion.odyssey.item.ModCreativeModeTabs;
 import net.thebastion.odyssey.item.ModItemProperties;
 import net.thebastion.odyssey.item.ModItems;
 import net.thebastion.odyssey.loot.ModLootModifiers;
 import net.thebastion.odyssey.particle.AxeHitParticle;
 import net.thebastion.odyssey.particle.ModParticles;
+import net.thebastion.odyssey.particle.RisingSquare;
+import net.thebastion.odyssey.particle.SpinningSquare;
 import net.thebastion.odyssey.registries.LootRegistry;
 import net.thebastion.odyssey.sound.ModSounds;
 import org.slf4j.Logger;
@@ -35,6 +42,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Odyssey.MODID)
@@ -70,6 +78,7 @@ public class Odyssey {
         ModParticles.register(modEventBus);
 
         LootRegistry.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -94,8 +103,30 @@ public class Odyssey {
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = Odyssey.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     static class ClientModEvents {
+        public static ShaderInstance MY_SHADER;
+
+        @SubscribeEvent
+        public static void registerShaders(RegisterShadersEvent event) throws IOException {
+            // 2. Load "assets/yourmodid/shaders/core/my_shader.json"
+            event.registerShader(
+                new ShaderInstance(
+                    event.getResourceProvider(),
+                    ResourceLocation.fromNamespaceAndPath("odyssey", "test"),
+                    DefaultVertexFormat.POSITION_COLOR_TEX // Must match your .json "attributes"!
+                ),
+                shader -> TEST = shader
+            );
+        }
+        @SubscribeEvent
+        public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(CloakModel.LAYER_LOCATION, CloakModel::createBodyLayer);
+        }
         @SubscribeEvent
         static void onClientSetup(FMLClientSetupEvent event) {
+            event.enqueueWork(() -> CuriosRendererRegistry.register(
+                    ModItems.CORE.get(),
+                    () -> new CloakRenderer(Minecraft.getInstance().getEntityModels().bakeLayer(CloakModel.LAYER_LOCATION))
+            ));
             EntityRenderers.register(ModEntities.BURIED.get(), BuriedRenderer::new);
             EntityRenderers.register(ModEntities.BURIED_LESSER.get(), BuriedLesserRenderer::new);
             EntityRenderers.register(ModEntities.HAN_D.get(), HanDRenderer::new);
@@ -107,6 +138,13 @@ public class Odyssey {
         @SubscribeEvent
         public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(ModParticles.AXE_HIT_PARTICLE.get(), AxeHitParticle.Provider::new);
+            event.registerSpriteSet(ModParticles.SPINNING_RED_PARTICLES.get(), SpinningSquare.Provider::new);
+            event.registerSpriteSet(ModParticles.SPINNING_YELLOW_PARTICLES.get(), SpinningSquare.Provider::new);
+            event.registerSpriteSet(ModParticles.RISING_YELLOW_PARTICLES.get(), RisingSquare.Provider::new);
+        }
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }

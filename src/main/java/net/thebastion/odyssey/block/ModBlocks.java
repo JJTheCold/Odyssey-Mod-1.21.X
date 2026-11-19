@@ -7,10 +7,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.thebastion.odyssey.Odyssey;
+import net.thebastion.odyssey.block.custom.AncientsAltar;
+import net.thebastion.odyssey.block.custom.InscriberBlock;
+import net.thebastion.odyssey.block.custom.Pedestal;
 import net.thebastion.odyssey.item.ModItems;
 
 import java.util.function.Supplier;
@@ -18,6 +20,25 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Odyssey.MODID);
+
+    public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal",
+            () -> new Pedestal(BlockBehaviour.Properties.of()
+                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS)
+                    .mapColor(MapColor.COLOR_RED)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<Block> ANCIENTS_ALTAR = registerBlock("ancients-altar",
+            () -> new AncientsAltar(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS)
+                    .mapColor(MapColor.COLOR_RED)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<Block> INSCRIBER = registerBlock("inscriber",
+            () -> new InscriberBlock(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.ANCIENT_DEBRIS)
+                    .mapColor(MapColor.COLOR_BLUE)
+                    .noOcclusion()
+            ));
 
     public static final DeferredBlock<Block> BLOCK_OF_HONORED_METAL = registerBlock("block-of-honored-metal",
             () -> new Block(BlockBehaviour.Properties.of()

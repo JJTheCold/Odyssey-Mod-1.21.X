@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "odyssey:empty-ancient-recipe-book",
+          "name": "odyssey:empty-ancients-manuscript",
           "functions": [
             {
               "function": "minecraft:set_count",

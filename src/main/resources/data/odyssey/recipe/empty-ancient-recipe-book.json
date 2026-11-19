@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "odyssey:empty-ancient-recipe-book"
+      "item": "odyssey:empty-ancients-manuscript"
     },
     {
       "item": "odyssey:righteous-alloy"
@@ -23,6 +23,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "odyssey:ancient-recipe-book"
+    "id": "odyssey:ancients-manuscript"
   }
 }

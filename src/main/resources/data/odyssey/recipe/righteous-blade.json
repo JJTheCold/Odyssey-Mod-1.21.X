@@ -11,17 +11,14 @@
     "X": {
       "item": "odyssey:honored-metal-sword"
     },
-    "F": {
-      "item": "odyssey:imbued-fabric"
-    },
     "G": {
       "item": "odyssey:honored-metal"
     }
   },
   "pattern": [
     "#GA",
-    "AXG",
-    "FA "
+    "GAG",
+    "XG "
   ],
   "result": {
     "count": 1,

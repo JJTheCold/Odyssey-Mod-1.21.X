@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "odyssey:block/inscriber",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "odyssey:block/inscriber"
+    },
+    "facing=south": {
+      "model": "odyssey:block/inscriber",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "odyssey:block/inscriber",
+      "y": 270
+    }
+  }
+}

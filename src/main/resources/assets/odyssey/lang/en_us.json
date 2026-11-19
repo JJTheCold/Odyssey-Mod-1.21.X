@@ -16,16 +16,16 @@
 
   "item.odyssey.honored-metal-sword": "Honored Metal Sword",
 
-  "item.odyssey.ancient-recipe-book": "Ancient Recipe Manuscript",
-  "item.odyssey.empty-ancient-recipe-book": "Empty Manuscript",
+  "item.odyssey.ancients-manuscript": "Ancient Recipe Manuscript",
+  "item.odyssey.empty-ancients-manuscript": "Empty Manuscript",
   "item.odyssey.buried-schematic": "Buried Schematic",
 
   "item.odyssey.honored-metal": "Honored Metal",
   "item.odyssey.honored-metal-fragment": "Honored Fragment",
   "item.odyssey.righteous-alloy": "Righteous Alloy",
   "item.odyssey.imbued-fabric": "Imbued Fabric",
-  "item.odyssey.auric-fabric": "Auric Fabric",
-  "item.odyssey.atlas-fabric": "Atlas Fabric",
+  "item.odyssey.depth-fabric": "Auric Fabric",
+  "item.odyssey.wrought-fabric": "Atlas Fabric",
 
   "item.odyssey.conqueror-helmet": "Conqueror's Helm",
   "item.odyssey.conqueror-chestplate": "Conqueror's Chestpiece",
@@ -55,6 +55,10 @@
   "block.odyssey.polished-kruxrock-wall": "Polished Kruxrock Wall",
   "block.odyssey.polished-kruxrock-stairs": "Polished Kruxrock Stairs",
   "block.odyssey.polished-kruxrock-slab": "Polished Kruxrock Slab",
+
+  "block.odyssey.ancients-altar": "Ancient's Altar",
+  "block.odyssey.pedestal": "Pedestal",
+  "block.odyssey.inscriber": "Inscriber",
 
   "entity.odyssey.han-d": "Han-D",
   "entity.odyssey.buried-warrior": "Buried Warrior",

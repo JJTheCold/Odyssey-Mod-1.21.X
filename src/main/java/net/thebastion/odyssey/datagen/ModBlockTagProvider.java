@@ -31,6 +31,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STUDDED_KRUXROCK_BRICKS.get())
                 .add(ModBlocks.STUDDED_KRUXROCK_TILE.get())
                 .add(ModBlocks.HONORED_DEPOSIT.get())
+                .add(ModBlocks.PEDESTAL.get())
+                .add(ModBlocks.ANCIENTS_ALTAR.get())
+                .add(ModBlocks.INSCRIBER.get())
                 .add(ModBlocks.POLISHED_KRUXROCK.get()
                 );
 
@@ -39,6 +42,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.KRUXROCK_BRICKS.get())
                 .add(ModBlocks.KRUXROCK_PILLAR.get())
                 .add(ModBlocks.KRUXROCK_TILE.get())
+                .add(ModBlocks.PEDESTAL.get())
+                .add(ModBlocks.ANCIENTS_ALTAR.get())
+                .add(ModBlocks.INSCRIBER.get())
                 .add(ModBlocks.POLISHED_KRUXROCK.get()
                 );
 

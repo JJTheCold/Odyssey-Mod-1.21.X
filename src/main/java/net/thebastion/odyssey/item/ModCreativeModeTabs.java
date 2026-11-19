@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModItems.RIGHTEOUS_BLADE.get()))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RIGHTEOUS_BLADE);
+                        output.accept(ModItems.KNIGHTS_EDGE);
                         output.accept(ModItems.RIGHTEOUS_GUARD);
 
                         output.accept(ModItems.GUIDED_SCYTHE);
@@ -38,9 +39,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ANCIENT_RECIPE_BOOK);
                         output.accept(ModItems.USED_ANCIENT_RECIPE_BOOK);
                         output.accept(ModItems.BURIED_SCHEMATIC);
-                        output.accept(ModItems.IMBUED_FABRIC);
-                        output.accept(ModItems.AURIC_FABRIC);
-                        output.accept(ModItems.ATLAS_FABRIC);
+                        output.accept(ModItems.DEPTH_FABRIC);
+                        output.accept(ModItems.WROUGHT_FABRIC);
                         output.accept(ModItems.HONORED_METAL_FRAGMENT);
                         output.accept(ModItems.RIGHTEOUS_ALLOY);
                         output.accept(ModItems.HONORED_METAL);
@@ -65,6 +65,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STUDDED_KRUXROCK_PILLAR);
                         output.accept(ModBlocks.STUDDED_KRUXROCK_TILE);
                         output.accept(ModBlocks.BLOCK_OF_HONORED_METAL);
+                        output.accept(ModBlocks.ANCIENTS_ALTAR);
+                        output.accept(ModBlocks.PEDESTAL);
+                        output.accept(ModBlocks.INSCRIBER);
                         output.accept(ModItems.BURIED_SPAWNER);
                         output.accept(ModItems.BURIED_LESSER_SPAWNER);
                     }).build());
